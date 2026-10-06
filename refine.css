@@ -1,0 +1,155 @@
+/* Final art direction: white editorial field, three distinct collaboration cards. */
+.hero{height:760px;min-height:0;padding:0;overflow:hidden}
+.hero-copy{height:100%;padding:70px 8vw 0;display:block;text-align:center}
+.hero-copy .eyebrow{display:none}
+.hero h1{position:relative;z-index:3;max-width:720px;margin:0 auto;font:700 clamp(3.2rem,5vw,5.9rem)/.92 'Onest',sans-serif;letter-spacing:-.085em}
+.hero h1 em{color:var(--wine)}.hero .dot{color:var(--ink)}.hero-art{inset:0;z-index:1}
+.hero-image{top:52%;width:min(20vw,285px);height:315px;z-index:1}.hero-image figcaption{font-size:14px;bottom:-21px}
+.stamp{z-index:3;top:160px;left:calc(50% - 390px);font-size:15px;color:var(--wine)}.vertical-label,.hero-ticker{display:none}
+.hero-note{position:absolute;z-index:4;left:calc(50% + 105px);bottom:96px;width:275px;margin:0;text-align:left;font-size:14px;line-height:1.35}
+.hero-copy .button{position:absolute;z-index:4;left:calc(50% - 375px);bottom:84px;padding:28px 36px;font-size:14px;gap:68px}.hero-copy .button span{white-space:nowrap}
+
+.cursor-blob{--tail:0px;position:fixed;z-index:100;left:0;top:0;width:20px;height:20px;border-radius:58% 42% 55% 45% / 56% 48% 52% 44%;background:#f1f1f1;mix-blend-mode:difference;pointer-events:none;will-change:transform;transform-origin:center}.cursor-blob::after{content:"";position:absolute;left:2px;top:50%;width:var(--tail);height:15px;transform:translate(-96%,-50%);border-radius:50%;background:inherit;opacity:.98;-webkit-mask-image:linear-gradient(to left,transparent 0%,#000 72%,#000 100%);mask-image:linear-gradient(to left,transparent 0%,#000 72%,#000 100%)}.cursor-blob.is-hover{background:#fff}
+
+.manifesto{position:relative;isolation:isolate;min-height:190px;overflow:hidden;padding:38px 9vw}.manifesto strong{position:relative;z-index:1}.manifesto strong em{color:var(--wine);font-style:normal}
+.manifesto::before,.manifesto::after{content:"";position:absolute;z-index:0;top:-24px;width:76px;height:238px;background:url('assets/lace-edge.png') center/100% 100% no-repeat;mix-blend-mode:multiply;opacity:.96}.manifesto::before{left:0}.manifesto::after{right:0;transform:scaleX(-1)}
+
+.collab-section{min-height:300vh;background:#fff}.collab-stage{position:sticky;top:70px;height:calc(100vh - 70px);min-height:620px;display:grid;grid-template-columns:.9fr 1.1fr;gap:7vw;align-items:center;overflow:hidden}
+.collab-intro h2{display:inline-block;margin:24px 0 22px;font:600 clamp(3.2rem,5vw,6rem)/.92 'Caveat',cursive;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:10px}.collab-intro>p:not(.section-kicker){max-width:450px;font-size:clamp(1.1rem,1.7vw,1.4rem);line-height:1.28}.collab-arrow{width:280px;margin:72px 0 0 17%;color:var(--ink);transform:rotate(6deg)}
+.collab-cards{position:relative;height:480px;overflow:hidden}.collab-card{position:absolute;top:50%;left:0;right:0;height:330px;margin-top:-165px;display:flex;flex-direction:column;justify-content:space-between;padding:32px 76px;background:#262626;color:#fff;border-radius:18px;box-shadow:0 18px 55px rgba(0,0,0,.13);overflow:hidden;will-change:transform}
+.collab-card::before,.collab-card::after{content:"";position:absolute;z-index:0;top:-12px;width:54px;height:365px;background:url('assets/lace-edge.png') center/100% 100% no-repeat;filter:invert(1) contrast(1.25);mix-blend-mode:screen;opacity:.6;pointer-events:none}.collab-card::before{left:-1px}.collab-card::after{right:-1px;transform:scaleX(-1)}.collab-card>span,.collab-card>div{position:relative;z-index:1}
+.collab-card>span{font:400 clamp(1.25rem,1.9vw,1.8rem)/1 'DM Mono',monospace;color:#f4f4f2}.collab-card div{max-width:460px}.collab-card h3{margin:0 0 12px;font:600 clamp(1.35rem,2.1vw,2rem)/1.08 'Onest',sans-serif;letter-spacing:-.05em}.collab-card p{margin:0;font-size:clamp(.95rem,1.2vw,1.08rem);line-height:1.33;color:#e9e9e7}
+
+.modal-open{cursor:auto}.modal-open .cursor-blob{display:none!important}.modal-open button,.modal-open select,.modal-open input,.modal-open label{cursor:pointer}.modal-options{display:grid;grid-template-columns:1fr 1.5fr;gap:22px;margin:30px 0 12px}.modal-options>label,.modal-options fieldset{display:flex;flex-direction:column;gap:9px;margin:0;font:500 12px 'DM Mono',monospace;text-transform:uppercase}.modal-options select{padding:12px 14px;border:1px solid #b9b2ad;background:#fff;color:var(--ink);font:500 13px 'DM Mono',monospace}.modal-options fieldset{border:0;padding:0}.modal-options fieldset label{display:inline-flex;flex-direction:row;align-items:center;gap:7px;font-size:12px;text-transform:none}.modal-options input{accent-color:var(--wine)}
+
+.faq{display:grid;grid-template-columns:.75fr 1.25fr;gap:8vw;background:#242424;color:#f7f7f5;padding-top:12vh;padding-bottom:12vh}.faq .section-kicker{color:#c2c2c2}.faq-heading h2{font:700 clamp(3.7rem,6vw,6.7rem)/.88 'Onest',sans-serif;letter-spacing:-.075em;text-transform:uppercase;margin:28px 0}.faq-heading h2 em{font-family:'Caveat',cursive;font-weight:600;text-transform:none;letter-spacing:-.04em;color:#cfb6b6}.faq-heading>p:last-child{max-width:270px;line-height:1.45;color:#d9d9d9}.faq-list{border-top:1px solid #d7d7d7;align-self:center}.faq details{border-bottom:1px solid #d7d7d7}.faq summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:25px 0;font:600 clamp(1.1rem,2vw,1.55rem)/1.15 'Onest',sans-serif;cursor:pointer}.faq summary::-webkit-details-marker{display:none}.faq summary span{font:300 3rem/.6 'Onest',sans-serif;transition:transform .25s}.faq details[open] summary span{transform:rotate(45deg);color:#d89b9b}.faq details p{max-width:90%;margin:0;padding:0 60px 26px 0;font-size:16px;line-height:1.45;color:#d9d9d9}
+
+.product-modal{width:min(940px,94vw);max-height:86vh;grid-template-columns:44% 56%;overflow:hidden}.modal-image{height:86vh;min-height:0;background:#f4f2ee}.modal-image img{width:100%;height:100%;object-fit:contain;mix-blend-mode:normal;padding:20px}.modal-copy{max-height:86vh;overflow-y:auto;padding:52px 42px 36px}.modal-close{right:16px;top:12px;width:44px;height:44px;border:2px solid #171717;border-radius:6px;line-height:1;background:#fff}
+
+@media (pointer:coarse){.cursor-blob{display:none}}@media (prefers-reduced-motion:reduce){.cursor-blob{display:none}}
+@media (max-width:900px){.hero{height:740px}.hero-copy{padding-top:68px}.hero h1{font-size:clamp(3rem,8vw,5rem);max-width:620px}.hero-image{width:270px;height:320px;top:52%}.stamp{left:7%;top:190px}.hero-note{left:auto;right:7%;bottom:83px;width:235px}.hero-copy .button{left:7%;bottom:70px}.faq{grid-template-columns:1fr;gap:55px}.faq-heading>p:last-child{max-width:420px}.collab-section{min-height:auto}.collab-stage{position:relative;top:auto;height:auto;min-height:0;display:block;overflow:visible}.collab-intro{padding-bottom:55px}.collab-cards{height:auto;overflow:visible}.collab-card{position:relative;top:auto;left:auto;right:auto;height:270px;margin:0 0 18px;transform:none!important}.collab-arrow{width:230px;margin:48px 0 0 10%}}
+@media (max-width:560px){.hero{height:680px}.hero-copy{padding:46px 20px 0}.hero h1{font-size:clamp(2.8rem,12vw,4.4rem);line-height:.9}.hero-image{width:235px;height:275px;top:51%}.stamp{display:none}.hero-note{left:20px;right:auto;bottom:102px;width:210px;font-size:13px}.hero-copy .button{left:20px;bottom:37px;padding:22px 26px;gap:38px}.hero-image figcaption{font-size:13px}.manifesto{min-height:172px;padding:36px 70px}.manifesto::before,.manifesto::after{width:48px;height:195px;top:-12px}.faq{padding-top:75px;padding-bottom:75px}.faq-heading h2{font-size:clamp(3rem,14vw,4.8rem)}.faq summary{padding:21px 0;font-size:1.1rem}.faq details p{padding-bottom:22px;padding-right:0;font-size:15px}.collab-card{height:290px;padding:28px 58px}.collab-card::before,.collab-card::after{width:42px;height:310px}.collab-card h3{font-size:1.35rem}.collab-card p{font-size:.94rem}.product-modal{grid-template-columns:1fr;max-height:90vh}.modal-image{height:36vh}.modal-copy{max-height:54vh;padding:28px 24px}.modal-close{right:12px;top:10px}.modal-options{grid-template-columns:1fr;gap:16px}}
+
+/* Unified burgundy accent in the FAQ. */
+.faq-heading h2 em,.faq details[open] summary span{color:var(--wine)!important}
+.contact h2 em{font-family:'Caveat',cursive!important;font-weight:600!important;text-transform:none!important;letter-spacing:-.04em!important;color:var(--wine)!important}
+
+/* Footer contrast: dark field with warm-white readable type. */
+.site-footer{background:#222!important;color:var(--paper)!important}
+.site-footer p,.site-footer .footer-end{color:rgba(245,242,237,.78)!important}
+.site-footer a{color:var(--paper)!important}
+.site-footer a:hover{color:var(--blue)!important}
+.footer-credit{grid-column:1/-1;border-top:1px solid rgba(245,242,237,.24);padding-top:18px;color:#c7a783;font:12px/1.4 'DM Mono',monospace;letter-spacing:.03em;text-transform:uppercase}
+
+/* Catalog rhythm: every product gets the same frame, inset and metadata height. */
+.product-grid{align-items:start}
+.product-card{background:#efede8}
+.card-media{height:420px;display:grid;place-items:center;background:#efede8!important;overflow:hidden}
+.card-media img{width:100%;height:100%;padding:20px;object-fit:contain;object-position:center;filter:none!important;mix-blend-mode:multiply;transform:none!important}
+.card-meta{min-height:122px;align-content:start}
+.product-card:hover .card-media img{transform:scale(1.025)!important}
+@media (max-width:900px){.card-media{height:330px}}
+@media (max-width:560px){.card-media{height:410px}}
+
+.marquee-divider{height:62px;display:flex;align-items:center;overflow:hidden;background:#2b2b2b;color:var(--paper);white-space:nowrap;border-top:1px solid rgba(245,242,237,.14);border-bottom:1px solid rgba(245,242,237,.14)}
+.marquee-divider-track{display:flex;align-items:center;min-width:max-content;font:500 clamp(.82rem,1.1vw,1.05rem)/1 'Onest',sans-serif;animation:marquee-divider 26s linear infinite;text-transform:lowercase;will-change:transform}
+.marquee-set{display:flex;align-items:center;gap:27px;padding-right:27px;flex:none}
+.marquee-set b{font:400 1.2em/1 'Onest',sans-serif;color:var(--paper)}
+@keyframes marquee-divider{to{transform:translateX(-25%)}}
+@media (prefers-reduced-motion:reduce){.marquee-divider-track{animation:none}}
+
+/* Header wordmark: handwritten, without the old index mark. */
+.site-header .brand{font:500 30px/1 'Caveat',cursive;letter-spacing:.01em;text-transform:none}
+.site-header .brand:hover{color:var(--paper)}
+@media (max-width:560px){.site-header .brand{font-size:25px}}
+
+/* Archive cards: one tactile object instead of a detached photo and loose metadata. */
+.product-grid{gap:34px 24px;align-items:stretch}
+.product-card{--card-paper:#f7f6f2;display:flex;flex-direction:column;min-height:625px;overflow:hidden;border:1px solid #171717;border-radius:20px 3px 20px 3px;background:var(--card-paper);box-shadow:5px 6px 0 rgba(23,23,23,.08);transition:transform .3s ease,box-shadow .3s ease}
+.product-card:hover{transform:translateY(-7px) rotate(-.35deg);box-shadow:10px 13px 0 rgba(107,11,12,.16)}
+.card-media{height:382px;flex:0 0 382px;border:0;border-bottom:1px solid #171717;background:var(--card-paper)!important}
+.card-media img{padding:0;object-fit:cover;object-position:center;mix-blend-mode:normal}
+.card-no{top:14px;left:14px;padding:6px 8px;background:#171717;color:var(--paper);font-size:10px;letter-spacing:.06em}
+.card-action{top:auto;right:14px;bottom:14px;z-index:2;width:34px;height:34px;display:grid;place-items:center;overflow:hidden;border:1px solid #171717;border-radius:50%;background:var(--paper);color:#171717;font-size:0;opacity:1;transform:none}
+.card-action::after{content:'↗';font:400 17px/1 'DM Mono',monospace}
+.card-meta{display:flex;flex:1;flex-direction:column;align-items:center;min-height:0;padding:24px 24px 22px;text-align:center;background:var(--card-paper)}
+.card-meta h3{min-height:58px;margin:0;color:#171717;font:700 clamp(1.35rem,1.8vw,1.85rem)/1.08 'Onest',sans-serif;letter-spacing:-.055em}
+.card-meta p,.card-meta span{color:#393633;font:500 11px/1.5 'DM Mono',monospace;letter-spacing:.01em;text-transform:uppercase}
+.card-meta p{margin:13px 0 0}.card-meta span{margin:8px 0 0}
+.card-meta b{margin-top:auto;padding:9px 17px;background:var(--wine);color:var(--paper);font:500 14px/1 'DM Mono',monospace;letter-spacing:.04em;clip-path:polygon(3% 0,100% 5%,97% 100%,0 94%)}
+@media (max-width:900px){.product-card{min-height:555px}.card-media{height:315px;flex-basis:315px}.card-meta h3{min-height:50px}}
+@media (max-width:560px){.product-card{min-height:0}.card-media{height:395px;flex-basis:395px}.card-meta h3{min-height:0}.card-meta{min-height:190px}}
+
+/* A calmer hero: smaller type and object leave room for the CTA to breathe. */
+.hero{height:700px}
+.hero-copy{padding-top:52px}
+.hero h1{max-width:650px;font-size:clamp(3rem,4.25vw,4.9rem);line-height:.94}
+.hero h1>span{display:block}
+.hero h1 em{display:block;font-family:'Caveat',cursive;font-size:1.34em;font-weight:600;letter-spacing:-.055em;line-height:.63;text-transform:lowercase;transform:translateY(-4px)}
+.hero-image{width:min(18vw,245px);height:280px;top:49%}
+.stamp{top:140px;left:calc(50% - 360px);font-size:14px}
+.hero-note{bottom:70px;width:245px;font-size:13px}
+.hero-copy .button{bottom:50px;left:calc(50% - 340px);padding:24px 30px;gap:56px}
+@media (max-width:900px){.hero{height:700px}.hero-copy{padding-top:56px}.hero h1{font-size:clamp(3rem,7.5vw,4.6rem)}.hero-image{width:245px;height:285px;top:50%}.stamp{left:7%;top:170px}.hero-note{bottom:82px}.hero-copy .button{left:7%;bottom:52px}}
+@media (max-width:560px){.hero{height:650px}.hero-copy{padding-top:42px}.hero h1{font-size:clamp(2.7rem,11vw,3.8rem)}.hero-image{width:215px;height:250px;top:49%}.hero-note{bottom:89px;width:205px}.hero-copy .button{bottom:30px;padding:19px 23px;gap:32px}}
+
+/* Eco story: a clear explanation of the product values inside the same editorial system. */
+.eco-note{position:relative;isolation:isolate;display:grid;grid-template-columns:.8fr 1.2fr;gap:6vw;margin-top:clamp(70px,10vw,150px);padding:26px 4.5vw 42px;background:#252525;color:var(--paper);border-radius:2px 24px 2px 24px;box-shadow:8px 8px 0 rgba(107,11,12,.12);overflow:hidden}.eco-note::before,.eco-note::after{content:"";position:absolute;z-index:0;top:0;width:64px;height:100%;background:url('assets/lace-edge.png') center/100% 100% no-repeat;filter:invert(1) contrast(1.15);mix-blend-mode:screen;opacity:.58;pointer-events:none}.eco-note::before{left:-3px}.eco-note::after{right:-3px;transform:scaleX(-1)}
+.eco-ribbon{position:relative;z-index:1;grid-column:1/-1;min-height:94px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:8px 6vw;border-top:1px solid rgba(245,242,237,.45);border-bottom:1px solid rgba(245,242,237,.45);font:11px 'DM Mono',monospace;text-transform:uppercase}.eco-ribbon strong{font:600 clamp(1.8rem,3.2vw,3rem)/.82 'Caveat',cursive;letter-spacing:.01em;text-align:center;text-transform:none}.eco-ribbon strong em{color:#b21a25;font-style:normal}.eco-lead,.eco-points{position:relative;z-index:1}
+.eco-lead h3{margin:18px 0 20px;font:700 clamp(2.8rem,5vw,5.8rem)/.84 'Onest',sans-serif;letter-spacing:-.08em;text-transform:uppercase}.eco-lead h3 em{font:600 1.05em/1 'Caveat',cursive;letter-spacing:-.04em;text-transform:none;color:#b21a25}.eco-lead>p:last-child{max-width:300px;color:#d8d4ce;line-height:1.45}
+.eco-points{display:grid;grid-template-columns:repeat(2,1fr);gap:0 34px}.eco-points article{position:relative;padding:18px 0 22px;border-top:1px solid rgba(245,242,237,.35)}.eco-points b{font:11px 'DM Mono',monospace;color:#c7a783}.eco-points h4{margin:16px 0 8px;font:600 1.35rem/1 'Onest',sans-serif;letter-spacing:-.04em}.eco-points p{margin:0;color:#d8d4ce;font-size:13px;line-height:1.42}
+@media (max-width:900px){.eco-note{grid-template-columns:1fr;gap:38px;padding:22px 28px 34px}.eco-ribbon{padding:8px 3vw}.eco-lead>p:last-child{max-width:460px}}
+@media (max-width:560px){.eco-note{padding:18px 22px 30px;border-radius:2px 18px 2px 18px}.eco-ribbon{min-height:86px;gap:10px;padding:8px 0;font-size:9px}.eco-ribbon strong{font-size:1.55rem}.eco-points{grid-template-columns:1fr;gap:0}.eco-points h4{font-size:1.2rem}}
+
+/* Same card design, just a little more compact. */
+.product-card{min-height:600px}
+.card-media{height:365px;flex-basis:365px}
+@media (max-width:900px){.product-card{min-height:530px}.card-media{height:300px;flex-basis:300px}}
+@media (max-width:560px){.product-card{min-height:0}.card-media{height:370px;flex-basis:370px}}
+
+/* Compact eco card: preserve the layout, reduce its visual weight, and keep lace proportions natural. */
+.eco-note{gap:3.5vw;padding:18px 4.5vw 28px}
+.eco-note::before,.eco-note::after{top:0;bottom:0;width:76px;height:auto;background-size:auto 100%;background-position:center;background-repeat:no-repeat}
+.eco-ribbon{min-height:72px;padding:5px 5vw}.eco-ribbon strong{font-size:clamp(1.55rem,2.6vw,2.45rem)}
+.eco-lead h3{font-size:clamp(2.4rem,3.8vw,4.2rem);margin:13px 0 15px}.eco-lead>p:last-child{font-size:14px}
+.eco-points article{padding:12px 0 15px}.eco-points b{color:rgba(245,242,237,.62)}.eco-points h4{margin:10px 0 6px;font-size:1.15rem}.eco-points p{font-size:12px;line-height:1.34}
+@media (max-width:900px){.eco-note{padding:16px 28px 26px}.eco-note::before,.eco-note::after{width:58px}.eco-ribbon{min-height:68px}}
+@media (max-width:560px){.eco-note{padding:14px 22px 24px}.eco-note::before,.eco-note::after{width:42px}.eco-ribbon{min-height:66px}.eco-ribbon strong{font-size:1.35rem}}
+
+/* Lace is cropped by the card edge, not squeezed: full-height, narrower, and gap-free. */
+.eco-note::before,.eco-note::after{top:-1px;bottom:-1px;width:54px;height:auto;background-size:auto 101%;background-position:center center}
+.eco-note::before{left:-6px}.eco-note::after{right:-6px}
+@media (max-width:900px){.eco-note::before,.eco-note::after{width:46px}}
+@media (max-width:560px){.eco-note::before,.eco-note::after{width:36px}}
+
+/* Replace the lace with a barely-there dotted edge texture. */
+.eco-note::before,.eco-note::after{top:0;bottom:0;left:0;right:auto;width:68px;height:auto;background:radial-gradient(circle at 18% 12%,rgba(245,242,237,.23) 0 2px,transparent 2.3px),radial-gradient(circle at 72% 34%,rgba(245,242,237,.18) 0 1.5px,transparent 1.9px),radial-gradient(circle at 38% 68%,rgba(245,242,237,.2) 0 2.5px,transparent 2.9px),radial-gradient(circle at 86% 88%,rgba(245,242,237,.16) 0 1.7px,transparent 2px);background-size:31px 47px,43px 59px,37px 53px,49px 67px;background-position:0 0,8px 15px,3px 7px,12px 28px;background-repeat:repeat;filter:none;mix-blend-mode:normal;opacity:.4}
+.eco-note::after{left:auto;right:0;transform:none}
+@media (max-width:900px){.eco-note::before,.eco-note::after{width:54px}}
+@media (max-width:560px){.eco-note::before,.eco-note::after{width:36px}}
+
+/* Standard browser cursor: the decorative cursor was intentionally removed. */
+body{cursor:auto}
+a,button,.product-card,input,select,textarea,summary{cursor:pointer}
+.product-card:focus-visible{outline:2px solid var(--wine);outline-offset:5px}
+.card-meta h3,.modal-copy h2{overflow-wrap:anywhere}
+.empty-state{grid-column:1/-1;padding:80px 20px;border:1px dashed currentColor;text-align:center;font:14px 'DM Mono',monospace;text-transform:uppercase}
+.image-error{object-fit:contain!important;filter:none!important;padding:24px}
+
+/* Финальная настройка типографики контактного блока и футера. */
+.contact h2{font-size:clamp(3.6rem,7vw,7.8rem)}
+.footer-brand{font:500 26px/0.82 'Caveat',cursive;letter-spacing:.01em;text-transform:none}
+.footer-brand em{font:inherit;text-transform:none}
+@media (max-width:560px){.footer-brand{font-size:23px}}
+
+
+/* На мобильном меню остаётся доступным: оно прокручивается в одну строку. */
+@media (max-width:560px){
+  .site-header{height:auto;min-height:62px;flex-wrap:wrap;padding:12px 20px 10px;row-gap:10px}
+  .site-header .brand{order:1}
+  .site-header .header-index{order:2;margin-left:auto}
+  .site-header nav{display:flex;order:3;width:100%;gap:18px;overflow-x:auto;white-space:nowrap;padding-bottom:2px;scrollbar-width:none}
+  .site-header nav::-webkit-scrollbar{display:none}
+}
+
+@media (max-width:560px){.hero-note{bottom:112px}}
